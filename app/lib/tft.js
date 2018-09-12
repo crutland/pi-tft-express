@@ -15,14 +15,14 @@ class Tft {
   printCenter(text, inverse = false, centered = true) {
     fb.clear();
 
-    if (invert) {
+    if (inverse) {
       white();
     } else {
       black();
     }
     fb.rect(0, 0, xMax, yMax);
 
-    if (invert) {
+    if (inverse) {
       black();
     } else {
       white();
