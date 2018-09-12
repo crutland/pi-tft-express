@@ -2,7 +2,7 @@
   "name": "pi-tft-express",
   "version": "1.0.0",
   "description": "basic example of an express server running on a Pi with resin.io",
-  "main": "src/server.js",
+  "main": "app/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
