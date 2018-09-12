@@ -30,5 +30,5 @@ console.log("initializing app...");
 
 app.listen(80, () => {
   console.log(`server listening on port 80`);
-  tft.printCenter("Listening...", false, true);
+  tft.printCenter("Now Listening...", false, true);
 });
