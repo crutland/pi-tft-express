@@ -13,17 +13,22 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
+
   console.log(`Incoming Post Request`);
   console.log(req.body);
   if(req.body.message) {
-    tft.printCenter(req.body.message, true, false)
+    tft.printCenter(req.body.message, true, true)
     res.sendStatus(200);
+  } else {
+    tft.printCenter("No Message Provided!", true, true);
+    res.status(400).json({message: "You must provide a message parameter."});
   }
+  setTimeout(() => tft.printCenter(`Last req: ${new Date().toLocaleString()}`), 5000);
 })
 
 console.log("initializing app...");
 
-const server = app.listen(80, () => {
+app.listen(80, () => {
   console.log(`server listening on port 80`);
   tft.printCenter("Listening...", false, true);
 });
